@@ -1,6 +1,6 @@
 # SnapSecure
 
-SnapSecure is an OCR-based sensitive data detection and redaction system. The original rule-based detector is preserved, and the project now includes an added hybrid layer:
+SnapSecure is an OCR and ML based sensitive data detection and redaction system.
 
 - OCR extracts text and word locations from screenshots.
 - Rule-based detection identifies Aadhaar, PAN, phone numbers, emails, UPI IDs, OTPs, passwords, transaction IDs, and similar sensitive values.
@@ -50,4 +50,4 @@ The current pipeline is:
 Image upload -> preprocessing -> OCR -> rule detector -> context analyzer -> NLP + ML hybrid analyzer -> risk score -> highlight/redact UI
 ```
 
-The original rule detector remains the main deterministic detection layer. The new ML/NLP modules are added as supporting analysis so the project can be described as a hybrid OCR, rule-based, ML, and NLP sensitive-data detection system.
+The rule detector remains the main deterministic detection layer. The ML/NLP modules are added as supporting analysis.
